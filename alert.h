@@ -5,6 +5,3 @@ void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struc
 
 void emailAlerter();
 void ledAlerter();
-
-extern int emailAlertCallCount;
-extern int ledAlertCallCount;

@@ -5,9 +5,9 @@ void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struc
 
     if (computedStats.max > maxThreshold){
 
-        emailAlerter();//alerters[0]();
+        alerters[0]();
 
-        ledAlerter();//alerters[1]();
+        alerters[1]();
     }
 }
 
