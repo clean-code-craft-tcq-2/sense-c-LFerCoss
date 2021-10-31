@@ -14,10 +14,10 @@ TEST_CASE("reports average, minimum and maximum") {
     REQUIRE(abs(computedStats.average - 4.525) < epsilon);
     REQUIRE(abs(computedStats.max - 8.9) < epsilon);
     REQUIRE(abs(computedStats.min - 1.5) < epsilon);
-    REQUIRE(abs(computedStats.min - 8.9) < epsilon);
+    //REQUIRE(abs(computedStats.min - 8.9) < epsilon); // Commented Test case for Fail
 }
 
-/*TEST_CASE("average is NaN for empty array") {
+TEST_CASE("average is NaN for empty array") {
     struct Stats computedStats = compute_statistics(0, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
@@ -26,6 +26,8 @@ TEST_CASE("reports average, minimum and maximum") {
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
 
+
+/*
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions

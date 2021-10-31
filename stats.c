@@ -3,6 +3,11 @@
 struct Stats compute_statistics(const float* numberset, int setlength) {
     unsigned char index = 0;
     struct Stats s;
+
+
+
+
+
     s.average = 0;
     s.min = 0;
     s.max = 0;
@@ -18,7 +23,6 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
             s.min = numberset[index]; // Get Min Number
         }  
     }
-
     s.average = s.average/setlength;// Average Calculation
 
     return s;
