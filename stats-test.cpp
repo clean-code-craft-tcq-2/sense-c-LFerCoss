@@ -41,11 +41,11 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     struct Stats computedStats = compute_statistics(numberset, setlength);
 
-    const float maxThreshold = 100.02;
+    const float maxThreshold = 10.02;
     check_and_alert(maxThreshold, alerters, computedStats);
 
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
-    REQUIRE(emailAlertCallCount == 0);
-    REQUIRE(ledAlertCallCount == 0);
+    REQUIRE(emailAlertCallCount == 1);
+    REQUIRE(ledAlertCallCount == 1);
 }
